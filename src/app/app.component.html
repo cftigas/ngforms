@@ -13,6 +13,22 @@
            {{ titleAlert }}
           </div>
 
+
+          <label>Email
+            <input type="text" formControlName = "primaryEmail" email="true" >
+          </label>
+          <div class="alert" *ngIf="rForm.controls['primaryEmail'].errors?.email || !rForm.controls['name'].valid && rForm.controls['primaryEmail'].touched ">
+           {{ emailAlert }}
+          </div>
+
+          <label>Password
+            <input type="Password" formControlName = "primaryEmail" email="true" >
+          </label>
+          <div class="alert" *ngIf="rForm.controls['primaryEmail'].errors?.email || !rForm.controls['name'].valid && rForm.controls['primaryEmail'].touched ">
+           {{ emailAlert }}
+          </div>
+
+
           <label>Description
             <textarea formControlName = "description"></textarea>
           </label>
@@ -32,7 +48,7 @@
   <div class="form-container">
     <div class="row columns">
       <h1>{{ name }}</h1>
-
+      <i>{{ primaryEmail }}</i>
       <p>{{ description }}</p>
     </div>
   </div>
